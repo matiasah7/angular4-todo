@@ -1,0 +1,8 @@
+<form (ngSubmit)="add(task, myInput)">
+  <input type="text" name="task" [(ngModel)]="task" #myInput class="task-input" value="">
+  <input type="submit" name="submit" class="submit-button" value="">
+</form>
+
+<todo-item *ngFor="let individualtask of tasks"
+  [individualtask]="individualtask">
+</todo-item>
